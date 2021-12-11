@@ -1,0 +1,128 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--bright-red);
+    background: url(imgs/background.png);
+    background-size: cover;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.gallery,
+img,
+button {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--snow);
+    padding: 3em;
+    min-width: 650px;
+}
+
+img {
+    height: 300px;
+  }
+
+
+button {
+    padding: 1em;
+    margin: 0.5em;
+    border: none;
+    font-size: 1rem;
+    background-color: var(--light-green);
+    color: var(--snow);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--snow);
+    background: var(--bright-red);
+}
+
+
+
+.play-jingle {
+    font-family: inherit;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background: var(--bright-red);
+    font-size: 20px;
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    transform: rotate(-25deg);
+    transition: all .5s ease-in-out;
+    z-index: 1;
+}
+.play-jingle::before {
+    content: '';
+    height: 10px;
+    width: 20px;
+    background: var(--gold);
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+.play-jingle:hover {
+    background: var(--light-green);
+    transform: rotate(5deg);
+}
+
+.material-icons-outlined {
+    font-size: 30px;
+}
+
+.min-max-container {
+    background: rgba(0, 255, 0, 0.1);
+    padding: 20px 0;
+    margin: 40px;
+}
+.min-max-text {
+    margin: 0;
+    color: var(--bright-red);
+}
+.btn-min-max {
+    margin: 5px 40px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
